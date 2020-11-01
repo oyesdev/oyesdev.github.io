@@ -3,6 +3,12 @@
     padding:0px;
     box-sizing: border-box;
 }
+body{
+    background-color: #1a1c1d;
+    font-family: 'Fira Mono', monospace;
+}
+
+/* nav bar */
 nav{
     position: fixed;
     top:0;
@@ -10,13 +16,13 @@ nav{
     display: flex;
     justify-content:space-around;
     align-items: center;
-    min-height:8vh;
+    min-height:10vh;
     background-color: #1a1c1d;
-    font-family: 'Fira Mono', monospace;
+    z-index: 1;
 }
 .logo{
     color:rgb(226, 226, 226);
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     font-size: 1.6rem;
 }
 .nav-links{
@@ -26,11 +32,43 @@ nav{
     width:42%;
     list-style: none;
 }
-.nav-links a{
+.nav-links li a{
     color: rgb(226,226,226);
     text-decoration: none solid;
     letter-spacing: 2px;
     font-size:0.9rem;
+}
+/* navbar's bottom animation */
+.bottom-nav-anim{
+    position: relative;
+}
+.bottom-nav-anim::after{
+    content:'';
+    display:block;
+    position: absolute;
+    bottom:-8px;
+    left:0;
+    width:100%;
+    height:2px;
+    background: #fff;
+    transform: scaleX(0);
+    transition: transform 0.2s;
+    transform-origin: right;
+}
+.bottom-nav-anim:hover::after{
+    transform:scaleX(1);
+    transform-origin: left;
+    transition: transform 0.2s;
+}
+.bottom-nav-anim:active::after{
+    content:'';
+    display:block;
+    position:absolute;
+    bottom:-8px;
+    left:0;
+    width:100%;
+    height:2px;
+    background:#fff;
 }
 .button{
     color: rgb(226,226,226);
@@ -40,6 +78,12 @@ nav{
     border-radius: 0.2rem;
     cursor: pointer;
 }
+.button:hover{
+    color: black;
+    background-color: rgb(226,226,226);
+    font-weight: bold;
+}
+/* burger icon for mobile view */
 .burger{
     display: none;
     cursor: pointer;
@@ -51,6 +95,7 @@ nav{
     background-color:rgb(226,226,226);
     transition: all 0.3s ease;
 }
+/* responsive navbar */
 @media screen and (max-width:1024px){
     .nav-links{
         width:70%;
@@ -63,8 +108,8 @@ nav{
     .nav-links{
         position: absolute;
         right: 0px;
-        height: 92vh;
-        top:8vh;
+        height: 90vh;
+        top:10vh;
         background-color: #1a1c1d;
         display: flex;
         flex-direction: column;
@@ -102,7 +147,57 @@ nav{
 .toggle .line3{
     transform: rotate(45deg) translate(-5px,-6px);
 }
-img{
-    height: 580px;
-    width: 100%;
+main{
+    margin-top:10vh;
+    position:relative;
+}
+.home{
+    height: 90vh;
+    opacity: 1;
+    position: relative;
+}
+.home-content{
+    position: absolute;
+    top: 5%;
+    left: 10%;
+}
+.intro-text-1{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #6689a7;
+}
+.intro-text-2{
+    margin: 20px 0px 0px 0px;
+    font-size: 4rem;
+    font-weight: bolder;
+    color: #d1ced5;
+}
+.intro-text-3{
+    margin: 30px 0px 0px 0px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #6689a7;
+}
+p{
+    margin-top: 50px;
+    color: #d1ced5;
+    line-height: 1.8;
+}
+.fa{
+    margin-top: 80px;
+    margin-left: 30px;
+    background: #d1c3d5;
+    padding: 4px;
+    border-radius: 15%;
+    font-size: 25px;
+    text-decoration: none;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.home-contact a:hover{
+    transform: translateY(-10px);
+}
+
+a:active, a:link, a:visited{
+    color: black;
 }

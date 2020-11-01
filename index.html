@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Divyansh Srivastava | Web Developer</title>
 
@@ -17,16 +18,16 @@
         </div>
         <ul class="nav-links">
             <li> 
-                <a href="#">Home</a> 
+                <a href="#home" class="bottom-nav-anim">Home</a> 
             </li>
             <li> 
-                <a href="#">About</a> 
+                <a href="#" class="bottom-nav-anim">About</a> 
             </li>
             <li> 
-                <a href="#">Projects</a> 
+                <a href="#" class="bottom-nav-anim">Projects</a> 
             </li>
             <li> 
-                <a href="#">Contact</a> 
+                <a href="#" class="bottom-nav-anim">Contact</a> 
             </li>
             <li>
                 <a href="https://drive.google.com/file/d/1vy66AJ8aTZcoFBLYBJddDBnPMZeUC5lu/view?usp=sharing" target="_blank" class="button">Resume</a>
@@ -38,9 +39,33 @@
             <div class="line3"></div>
         </div>
     </nav>
-    <div class="container">
-        <img src="background.jpg" alt="background">
-    </div>
+    <main>
+        <section class="home" id="home">
+            <div class="home-content">
+                <div class="intro-text-1">Hello, My name is</div>
+                <div class="intro-text-2">Divyansh Srivastava.</div>
+                <div class="intro-text-3">I am a full stack web developer and<br> designer.</div>
+                <p>I specialize in creating and deploying elegant responsive websites and web applications<br>  that engage users.</p>
+                <div class="home-contact">
+                    <a href="https://github.com/oyesdev" class="fa fa-github" target="_blank"></a>
+                    <a href="https://www.linkedin.com/in/divyansh-srivastava-49a995192/"target="_blank"  class="fa fa-linkedin"></a>
+                    <a href="mailto:divyanshsrivastava20@gmail.com"target="_blank" class="fa fa-envelope"></a>
+                    <a href="https://www.quora.com/profile/Devyansh-Srivastava-2"target="_blank" class="fa fa-quora"></a>
+                    <a href="https://twitter.com/devjs001"target="_blank" class="fa fa-twitter"></a>
+                </div>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div class="about-content">
+                <div class="heading">About</div>
+                <p> Hi! I am Divyansh Srivastava. I love to build things using Javascript Stack.<br> 
+                    I am focused and learning new things excites me. I aspire to be an excellent Software Engineer 
+                    and use my skills to make something productive. I actively seek out new technologies and 
+                    stay up-to-date on industry trends and advancements. 
+                </p>
+            </div>
+        </section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>

@@ -33,7 +33,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width:42%;
+    width:45%;
     list-style: none;
 }
 .nav-links li a{
@@ -127,9 +127,10 @@ nav{
     }
     .burger{
         display:block;
-        margin-right: 80px;
+        margin-right: 20px;
     }
 }
+
 .nav-active{
     transform: translateX(0%);
 }
@@ -166,8 +167,8 @@ main{
 .home-content{
     position: absolute;
     justify-self: center;
-    top: 5%;
-    left: 10%;
+    top: 15%;
+    left: 15%;
 }
 .shell-blink{
     font-weight: bold;
@@ -184,31 +185,31 @@ main{
 }
 .intro-text-1{
     margin-top: 10vh;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #6689a7;
 }
 .intro-text-2{
-    margin: 20px 0px 0px 0px;
-    font-size: 3.5rem;
+    margin: 30px 0px 0px 0px;
+    font-size: 3rem;
     font-weight: bolder;
     color: #d1ced5;
 }
 .intro-text-3{
     margin: 30px 0px 0px 0px;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     color: #6689a7;
 }
 p{
-    margin-top: 50px;
+    margin-top: 30px;
     color: #d1ced5;
     line-height: 1.8;
 }
 .fa{
-    margin-top: 80px;
-    margin-left: 30px;
+    margin-right:20px;
+    margin-top: 50px;
     background: #d1c3d5;
-    padding: 4px;
+    padding: 5px;
     border-radius: 15%;
     font-size: 25px;
     text-decoration: none;
@@ -222,28 +223,40 @@ p{
 a:active, a:link, a:visited{
     color: black;
 }
-@media screen and (max-width:1000px){
-    html{
-        scroll-behavior: smooth;
+@media screen and (max-width:600px){
+    .home-content{
+        left:5%;
+    }
+    .intro-text-1{
+        margin-top: 2vh;
     }
     .intro-text-2{
-        font-size: 2.5rem;
+        font-size: 1.5rem;
+        margin-top: 15px;
     }
     .intro-text-3{
-        margin-top: 20px;
-        font-size: 1.5rem;
-    }
-    p{
-        margin-top: 25px;
-        font-size: 20px;
+        font-size:1.2rem;
+        margin-top: 30px;
     }
     .fa{
-        margin-top: 70px;
-        margin-left: 0px;
+        padding: 3px;
+        margin-right:10px;
+        margin-top: 30px;
     }
-    .home-contact a{
-        padding:8px;
-        margin-left:5px;
+    .home-content p{
+        margin-top: 50px;
+    }
+}
+@media screen and (max-width:900px) {
+    /* Home section */
+    .home-content{
+        left:5%;
+    }
+    .home-content p {
+        font-size: 1rem;
+    }
+    .home-content p br {
+        content: '';
     }
 }
 /* About section */
@@ -254,12 +267,12 @@ a:active, a:link, a:visited{
 }
 .about-content{
     position: absolute;
-    left: 10%; 
+    left: 15%;
+    top:15%; 
 }
 .heading{
-    margin-top: 10%;
     font-size: 2.5rem;
-    font-weight: bold;
+    font-weight: bolder;
     color: #d1ced5;
     letter-spacing: 2px;
 }
@@ -270,8 +283,9 @@ a:active, a:link, a:visited{
 
 .about-image-container img{
     margin-top: 30px;
-    height:300px;
-    width:320px;
+    margin-left:40px;
+    height:250px;
+    width:270px;
 }
 .about-image-container p{
     font-family: 'Fira Mono', monospace;
@@ -280,8 +294,8 @@ a:active, a:link, a:visited{
     line-height: 2;
 }
 .skills{
-    margin-left: 320px;
-    margin-top: -25px;
+    margin-left: 32%;
+    margin-top: 10px;
 }
 ul{
 
@@ -295,20 +309,56 @@ ul li{
     line-height: 2;
     color: #d1ced5;
 }
-@media screen and (max-width:1000px){
-    .heading{
-        margin-top:90px;
+@media screen and (max-width:900px) {
+    .about-content{
+        top: 25%;
+        left: 5%;
     }
-    .about-image-container{
+    .about-image-container img {
+        height: 190px;
+        width: 210px;
+    }
+    .about-image-container p {
+        margin-right: 10px;
+    }
+    .skills{
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+    ul{
+        display: inline-block;
+    }
+    ul li{
+        font-family: 'Fira Mono', monospace;
+        font-size: 0.8rem;
+        line-height: 3;
+    }
+}
+@media screen and (max-width: 350px) {
+    .about-content{
+        top: 80%;
+    }
+    .skills{
+        margin-left: 10px;
+        margin-top: 0px;
+    }
+    .skills ul{
+        display: inline-block;
+        margin: 15px;
+        margin-left:5px;
+    }
+    .skills ul li{
+        font-family: 'Fira Mono', monospace;
+        font-size: 0.7rem;
+        line-height: 3;
+    }
+}
+@media screen and (max-width:1024px) {
+    .about-image-container {
         flex-direction: column;
     }
-    .about-image-container img{
-        margin-left: 7%;
-    }
-    .about-image-container p{
-        width: 70%;
-        font-size: 0.9rem;
-        margin-left: 30px;
+    .about-image-container p {
+        font-size: 15px;
     }
     .about-image-container p br{
         content: '';
@@ -317,13 +367,21 @@ ul li{
         content:"\A\A";
         white-space: pre;
     }
+    ul{
+        display: inline-block;
+    }
+}
+@media screen and (max-width: 700px) {
+    .about-content {
+        top:15%;
+    }
     .skills{
         margin-left: 0px;
         margin-top: 0px;
     }
     ul{
         display: inline-block;
-        margin: 20px;
+        margin: 15px;
         margin-left:5px;
     }
     ul li{

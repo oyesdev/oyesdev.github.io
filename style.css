@@ -380,7 +380,7 @@ ul li{
         line-height: 3;
     }
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 370px) {
     .about-content{
         top: 80%;
     }
@@ -397,6 +397,17 @@ ul li{
         font-family: 'Fira Mono', monospace;
         font-size: 0.7rem;
         line-height: 3;
+    }
+    .typing{
+        margin-left:-195px;
+    }
+    .typing::after{
+        height: 40%;
+    }
+    .typing::before{
+        content: '\A';
+        white-space: pre;
+        line-height: 1.5;
     }
 }
 @media screen and (max-width:1024px) {

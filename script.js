@@ -1,3 +1,4 @@
+// nav to burger menu
 const navSlide = () => {
         const burger = document.querySelector('.burger');
         const nav = document.querySelector('.nav-links');
@@ -20,6 +21,7 @@ const navSlide = () => {
     });
 }
 
+//typing animation
 const typingCarousel = () => {
     const texts = ['web developer', 'designer'];
     let count = 0;
@@ -44,8 +46,18 @@ const typingCarousel = () => {
     }());
 }
 
+//landing overlay hidden
+
+const hidingOverlay = () => {
+    window.addEventListener("load", function() {
+        const landingPage = document.querySelector(".landing-page");
+        landingPage.className += " hidden";
+    });
+}
+
 const app = () => {
     navSlide();
     typingCarousel();
+    hidingOverlay();
 }
 app();

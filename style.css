@@ -2,6 +2,8 @@
     margin:0px;
     padding:0px;
     box-sizing: border-box;
+    --circle-anim: 1s;
+    --landing-duration: 900ms;
 }
 html{
     scroll-behavior: smooth;
@@ -10,6 +12,98 @@ body{
     /* background-color: #1a1c1d; */
     background: #000000;
     font-family: 'Fira Mono', monospace;
+}
+
+/* Landing page */
+
+.landing-page{
+    background: black;
+    width:100vw;
+    height:100vh;
+    position: fixed;
+    z-index: 99;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    animation-name: background-anim;
+    animation-duration: var(--landing-duration);
+    animation-timing-function: ease-out;
+}
+.hidden{
+    animation: fadeOut 2s;
+    animation-fill-mode: forwards;
+    animation-delay: var(--landing-duration);
+}
+@keyframes fadeOut {
+    100%{
+        opacity:0;
+        visibility: hidden;
+    }
+}
+
+.circle-red{
+    width: 150px;
+    height:150px;
+    background: red;
+    border-radius: 50%;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(500%,140%);
+    animation-name: red-circle-anim;
+    animation-duration: var(--circle-anim);
+    animation-timing-function: ease-out;
+}
+
+.circle-pink{
+    width: 150px;
+    height:150px;
+    background: pink;
+    border-radius: 50%;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-545%,-300%);
+    animation-name: pink-circle-anim;
+    animation-duration: var(--circle-anim);
+    animation-timing-function: ease-out;
+}
+.landing-text{
+    color: #ffffff;
+    font-size: 4rem;
+    font-weight: bold;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-150%,440%);
+    animation-name: text-anim;
+    animation-duration: var(--circle-anim);
+    animation-timing-function: ease-out;
+}
+@keyframes red-circle-anim{
+    0%{
+        transform:translate(500%,140%);
+    }
+    100%{
+        transform: translate(-80%,-50%);
+    }
+}
+@keyframes pink-circle-anim{
+    0%{
+        transform: translate(-545%,-300%);
+    }
+    100%{
+        transform: translate(-50%,-30%);
+    }
+}
+@keyframes text-anim{
+    0%{
+        transform: translate(-150%,440%);
+    }
+    100%{
+        transform: translate(-80%,-50%);
+    }
 }
 
 /* nav bar */
@@ -195,7 +289,7 @@ main{
     font-weight: bolder;
     color: #d1ced5;
     transform:translateX(0);
-    animation: name-anim 1s ease-in;
+    animation: name-anim 1s ease-in 0.9s;
 }
 @keyframes name-anim {
     0%{
@@ -403,6 +497,7 @@ ul li{
     }
     .typing::after{
         height: 40%;
+        right: -8px;
     }
     .typing::before{
         content: '\A';

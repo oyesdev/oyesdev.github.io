@@ -2,17 +2,35 @@
     margin:0px;
     padding:0px;
     box-sizing: border-box;
-    --circle-anim: 1s;
-    --landing-duration: 900ms;
+    --circle-anim: 0.8s;
+    --landing-duration: 1s;
+    --scrollbarBG:grey;
+    --thumbBG: black;
 }
 html{
     scroll-behavior: smooth;
 }
 body{
-    /* background-color: #1a1c1d; */
-    background: #000000;
+    background:rgba(0,0,0,0.9);
     font-family: 'Fira Mono', monospace;
+    overflow-x: hidden;
 }
+/* Scrollbar */
+body::-webkit-scrollbar {
+    width: 10px;
+  }
+  body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  }
+  body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) ;
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
+  }  
 
 /* Landing page */
 
@@ -26,7 +44,6 @@ body{
     left:0;
     width: 100%;
     height: 100%;
-    animation-name: background-anim;
     animation-duration: var(--landing-duration);
     animation-timing-function: ease-out;
 }
@@ -76,7 +93,7 @@ body{
     position: absolute;
     top:50%;
     left:50%;
-    transform: translate(-150%,440%);
+    transform: translate(-150%,450%);
     animation-name: text-anim;
     animation-duration: var(--circle-anim);
     animation-timing-function: ease-out;
@@ -99,7 +116,7 @@ body{
 }
 @keyframes text-anim{
     0%{
-        transform: translate(-150%,440%);
+        transform: translate(-150%,450%);
     }
     100%{
         transform: translate(-80%,-50%);
@@ -117,7 +134,7 @@ nav{
     min-height:10vh;
     background-color: #1a1c1d;
     z-index: 1;
-    border-bottom: solid 3px rgba(128,128,128,0.1);
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
 }
 .logo{
     color:rgb(226, 226, 226);
@@ -415,6 +432,10 @@ a:active, a:link, a:visited{
     font-weight: bolder;
     color: #d1ced5;
     letter-spacing: 2px;
+    transition: letter-spacing 0.3s ease;
+}
+.heading:hover{
+    letter-spacing: 5px;
 }
 .about-image-container{
     display:flex;
@@ -540,5 +561,119 @@ ul li{
         font-family: 'Fira Mono', monospace;
         font-size: 0.8rem;
         line-height: 3;
+    }
+}
+/* projects section */
+.projects{
+    position: relative;
+    height: 100vh;
+    margin-top: 15%;
+}
+.projects-content {
+    position: absolute;
+    left:15%;
+    top:15%;
+}
+.project-list{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    margin-top:20px;
+}
+.project{
+    height: 360px;
+    width:330px;
+    background-color: #0b0c0c;
+    box-shadow: 5px 8px;
+    margin: 18px;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Fira Mono', sans-serif;
+    transition: transform 0.3s ease;
+    transition-delay: 100ms;
+}
+.project:hover{
+    transform: translateY(-5%);
+}
+.project h5{
+    font-size: 1.25rem;
+    color: #6689a7;
+}
+/* .project i{
+    margin-top: 30px;
+} */
+.project p {
+    margin-top: 30px;
+}
+.project .tech-list {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: lighter;
+    margin-top: 20%;
+    color: #6689a7;
+}
+.project-2 .tech-list, .project-3 .tech-list{
+    margin-top: 30px;
+}
+@media screen and (max-width: 1024px) {
+    .project-list{
+        grid-template-columns: auto auto;
+    }
+}
+@media screen and (max-width: 900px) {
+    .projects-content{
+        left: 5%;
+        top: 60%;
+    }
+}
+@media screen and (max-width: 700px) {
+    .projects-content {
+        top: 65%;
+    }
+    .project-list {
+        grid-template-columns: auto;
+    }
+}
+@media screen and (max-width: 370px) {
+    .projects-content{
+        top: 150%;
+    }
+    .project {
+        height:280px;
+        width:250px;
+        font-size: 10px;
+        padding: 15px;
+    }
+    .project .tech-list {
+        margin-top: 30%;
+    }
+    .project-2 .tech-list{
+        margin-top:12px;
+        line-height: 2;
+    }
+}
+@media screen and (max-width: 1290px) {
+    .project{
+        height: 320px;
+        width: 300px;
+        font-size: 15px;
+    }
+    .project a{
+        margin-top: 20px;
+    }
+    .project p {
+        margin-top:15px;
+    }
+    .project .tech-list{
+        margin-top: 25%;
+    }
+    .project-2 .tech-list, .project-3 .tech-list{
+        margin-top: 10px;
+    }
+    .project-2 .tech-list{
+        line-height: 2;
+        margin-top: 2px;
+    }
+    .project-2 p{
+        margin-top: 10px;
     }
 }

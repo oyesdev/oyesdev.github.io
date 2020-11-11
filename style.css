@@ -809,7 +809,7 @@ textarea{
         margin-top: 270%;
     }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 520px) {
     .contact{
         margin-top: 320%;
     }

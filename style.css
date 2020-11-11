@@ -193,11 +193,14 @@ nav{
     border: 1px solid rgb(190, 177, 177);
     border-radius: 0.2rem;
     cursor: pointer;
+    transition: 0.5s;
 }
 .button:hover{
     color: black;
     background-color: rgb(226,226,226);
     font-weight: bold;
+    border-radius: 8px;
+    border: 1px solid #999;
 }
 /* burger icon for mobile view */
 .burger{
@@ -419,7 +422,7 @@ a:active, a:link, a:visited{
 /* About section */
 
 .about{
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
 }
 .about-content{
@@ -598,9 +601,6 @@ ul li{
     font-size: 1.25rem;
     color: #6689a7;
 }
-/* .project i{
-    margin-top: 30px;
-} */
 .project p {
     margin-top: 30px;
 }
@@ -626,8 +626,11 @@ ul li{
     }
 }
 @media screen and (max-width: 700px) {
+    .projects{
+        margin-top: 60%;
+    }
     .projects-content {
-        top: 65%;
+        top: 15%;
     }
     .project-list {
         grid-template-columns: auto;
@@ -635,7 +638,7 @@ ul li{
 }
 @media screen and (max-width: 370px) {
     .projects-content{
-        top: 150%;
+        top: 80%;
     }
     .project {
         height:280px;
@@ -675,5 +678,169 @@ ul li{
     }
     .project-2 p{
         margin-top: 10px;
+    }
+}
+.contact{
+    position: relative;
+    margin-top: 30%;
+}
+
+.contact-heading{
+    margin-top: 12%;
+}
+
+.contact-contents{
+    position: absolute;
+    left: 15%;
+    width: 800px;
+    box-sizing: border-box;
+}
+form {
+    margin-top: 40px;
+}
+
+input {
+    padding: 10px 10px;
+    margin-bottom: 40px;
+}
+input[type="submit"]{
+    margin-bottom: 10px;
+}
+textarea {
+    height: 200px;
+    padding: 10px 10px;
+    margin-bottom: 40px;
+}
+input, textarea{
+    width: 100%;
+    margin-top: 10px;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    background: #282828;
+    font-size: 15px;
+    color: rgb(209, 195, 213,0.9);
+}
+input:focus,
+textarea:focus {
+    background: rgba(255,255,255,0.3);
+    color: #0b0c0c;
+    font-weight: 500;
+}
+input[type="submit"] {
+    width: 120px;
+    color: #d1c3d5;
+    font-size: 15px;
+    padding: 10px;
+    border: none;
+    margin-top: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+input[type="submit"]:hover {
+    background:rgba(255,255,255,0.6);
+    color: #282828;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 8px;
+}
+textarea{
+    margin-bottom: 20px;
+}
+::-webkit-resizer {
+    display: none;
+}
+.contact-contents form div {
+    position: relative;
+}
+.contact-contents form div label {
+    position: absolute;
+    top: 17px;
+    left: 6px;
+    color: rgb(255, 255, 255,0.3);
+    font-size: 18px;
+    transition: .5s;
+    pointer-events: none;
+}
+.contact-contents input:focus ~ label,
+.contact-contents textarea:focus ~ label,
+.contact-contents input:valid ~ label,
+.contact-contents textarea:valid ~ label {
+    top: -20px;
+    left: -6px;
+    font-size: 16px;
+    color: #6689a7;
+}
+@media screen and (max-width: 1000px) {
+    .contact-contents{
+        width: 580px;
+    }
+    .contact{
+        margin-top: 70%;
+    }
+}
+@media screen and (max-width: 900px) {
+    .contact{
+        margin-top: 100%;
+        left: -10%;
+    }
+    form{
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .contact{
+        margin-top: 110%;
+    }
+}
+@media screen and (max-width: 700px) {
+    .contact {
+        margin-top: 240%;
+    }
+}
+@media screen and (max-width:650px) {
+    .contact-contents {
+        width: 350px;
+    }
+    .contact{
+        margin-top: 270%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .contact{
+        margin-top: 320%;
+    }
+}
+@media screen and (max-width: 420px){
+    .contact-contents{
+        width: 320px;
+    }
+    .contact{
+        margin-top:410%;
+    }
+}
+@media screen and (max-width: 380px) {
+    .contact {
+        margin-top: 480%;
+    }
+    .contact-contents{
+        width: 270px;
+    }
+    .contact-heading{
+        margin-top: 100px;
+    }
+    .project{
+        width:250px
+    }
+    .project-2{
+        height: 340px;
+    }
+}
+@media screen and (max-width: 325px) {
+    .contact {
+        margin-top: 680%;
     }
 }

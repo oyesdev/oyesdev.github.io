@@ -813,6 +813,9 @@ textarea{
     .contact{
         margin-top: 320%;
     }
+    .contact-heading{
+        margin-top: 80px;
+    }
 }
 @media screen and (max-width: 450px){
     .contact-contents{

@@ -193,7 +193,7 @@ nav{
     border: 1px solid rgb(190, 177, 177);
     border-radius: 0.2rem;
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.6s;
 }
 .button:hover{
     color: black;
@@ -319,7 +319,7 @@ main{
         transform: translateX(0);
     }
     85%{
-        transform: translateX(-5%);
+        transform: translateX(-8%);
     }
     100%{
         transform: translateX(0);
@@ -591,11 +591,13 @@ ul li{
     padding: 20px;
     border-radius: 10px;
     font-family: 'Fira Mono', sans-serif;
+    opacity: 0.8;
     transition: transform 0.3s ease;
     transition-delay: 100ms;
 }
 .project:hover{
     transform: translateY(-5%);
+    opacity: 1;
 }
 .project h5{
     font-size: 1.25rem;
@@ -729,23 +731,22 @@ textarea:focus {
     color: #0b0c0c;
     font-weight: 500;
 }
-input[type="submit"] {
-    width: 120px;
-    color: #d1c3d5;
-    font-size: 15px;
-    padding: 10px;
-    border: none;
-    margin-top: 8px;
+input[type="submit"]{
+    color: rgb(226,226,226);
+    width:100px;
+    background: none;
+    padding: 0.5rem;
+    border: 1px solid rgb(190, 177, 177);
+    border-radius: 0.2rem;
     cursor: pointer;
-    text-transform: uppercase;
-    transition: 0.3s ease;
+    transition: 0.6s;
 }
 input[type="submit"]:hover {
-    background:rgba(255,255,255,0.6);
-    color: #282828;
+    color: black;
+    background-color: rgb(226,226,226);
     font-weight: bold;
-    letter-spacing: 2px;
     border-radius: 8px;
+    border: 1px solid #999;
 }
 textarea{
     margin-bottom: 20px;
@@ -761,7 +762,7 @@ textarea{
     top: 17px;
     left: 6px;
     color: rgb(255, 255, 255,0.3);
-    font-size: 18px;
+    font-size: 15px;
     transition: .5s;
     pointer-events: none;
 }

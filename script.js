@@ -23,7 +23,7 @@ const navSlide = () => {
 
 //typing animation
 const typingCarousel = () => {
-    const texts = ['web developer', 'designer'];
+    const texts = ['Web Developer', 'Designer'];
     let count = 0;
     let index = 0;
     let currentText = '';

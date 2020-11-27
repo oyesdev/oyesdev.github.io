@@ -751,6 +751,9 @@ input[type="submit"]:hover {
 textarea{
     margin-bottom: 20px;
 }
+textarea{
+    resize: none;
+}
 ::-webkit-resizer {
     display: none;
 }
@@ -771,7 +774,6 @@ textarea{
 .contact-contents input:valid ~ label,
 .contact-contents textarea:valid ~ label {
     top: -20px;
-    left: -6px;
     font-size: 16px;
     color: #6689a7;
 }

@@ -278,10 +278,12 @@ main{
 .home{
     min-height: 90vh;
     position: relative;
+    display: flex;
 }
 .home-content{
     position: absolute;
     justify-self: center;
+    vertical-align: center;
     top: 15%;
     left: 15%;
 }
